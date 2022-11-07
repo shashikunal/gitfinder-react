@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --base-color: #7d3c98;
+  --base-light-bg: #ecf0f1;
+  --sidebar-bg: #4a235a;
+}
+
+body {
+  background-color: var(--base-light-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--base-color);
+}
+
+#mainBlock > article {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.sidebar {
+  flex-basis: 20%;
+  background-color: var(--sidebar-bg);
+  color: var(--base-light-bg);
+}
+
+.mainpage {
+  flex-basis: 80%;
+}
+
+/* spinner css */
+.title {
+  display: flex;
+  justify-content: center;
+  color: #9440f5;
+  font-family: Poppins;
+  user-select: none;
+  text-shadow: 3px 3px black;
+}
+
+.title-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  width: 50%;
+  max-width: 10rem;
+  animation: rotate 3.6s linear infinite;
+}
+
+circle {
+  fill: none;
+  stroke: #9440f5;
+  stroke-width: 8px;
+  stroke-dasharray: 300;
+  animation: outline 2s cubic-bezier(0.77, 0, 0.18, 1) infinite;
+}
+
+@keyframes outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 600;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(-1turn);
+  }
+}
+figure {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainBlock > header {
+  border-bottom: 1px solid #e91e636e;
+  margin: 10px 0;
+}
+
+figure img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+#mainBlock header h2 {
+  padding: 0px 10px 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+}
+#mainBlock header p {
+  padding: 0px 10px 10px;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+#mainBlock main > div {
+  padding: 0 10px 10px;
+}
+#mainBlock main > div > span {
+  padding: 0 20px 0 0;
+}
+
+.mainpage > article {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mainpage > article > header {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-bottom: 2px solid #eeee;
+}
+.form-group {
+  display: flex;
+}
+.form-group input {
+  flex-basis: 90%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-right: none;
+  outline: none;
+}
+.form-group button {
+  flex-basis: 10%;
+  padding: 10px;
+  border: none;
+  background: var(--base-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: var(--sidebar-bg);
+}
+
+h2 {
+  padding: 0px 10px 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mainpage main {
+  background: #efefef;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.mainpage main > div {
+  flex-basis: 24%;
+  background: #fff;
+  min-height: 150px;
+}
+
+.mainpage main > div h1 {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #e91e63;
+}
+
+.mainpage main > div p.desc {
+  color: #111;
+  font-weight: 400;
+  padding: 5px 0;
+  text-transform: capitalize;
+}
+.repo_content {
+  color: #111;
+  font-weight: 400;
+  text-transform: capitalize;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 5px;
+  margin: 10px 0;
+}
+.repo_content span {
+  background: #9e9e9e3b;
+  padding: 2px 15px;
+  font-size: 12px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.btn_block {
+  color: #111;
+  font-weight: 400;
+  text-transform: capitalize;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 5px;
+  padding: 20px 0;
+}
+
+.btn_block a {
+  text-decoration: none;
+  padding: 2px 9px;
+  background-color: #9440f5;
+  color: #fff;
+  border: 1px solid #673ab7;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.btn_block a:hover {
+  background-color: #673ab7;
+  border: 1px solid #9440f5;
+}
